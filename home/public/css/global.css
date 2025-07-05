@@ -1,13 +1,17 @@
 body {
   font-family: "Roboto", sans-seri !important;
 }
+
+#content {
+  min-height: 70vh;
+}
+
 ul {
   list-style: none;
 }
 
 .container {
   width: 1440px;
-
   margin: auto;
   padding: 0 20px;
 }

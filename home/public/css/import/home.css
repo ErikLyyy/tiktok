@@ -7,6 +7,7 @@
   border-bottom: 1px solid #000;
   background-color: #fff;
   top: 0px;
+  z-index: 10;
 }
 
 #nav-wp {

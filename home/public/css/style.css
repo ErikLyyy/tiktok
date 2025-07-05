@@ -2,4 +2,9 @@
 
 @import "global.css";
 @import "import/home.css";
-@import "import/responsive/homeresponsive.css";
+@import "import/cat-pages.css";
+@import "import/swiper.css";
+
+/* Responsive */
+@import "import/responsive/home-responsive.css";
+@import "import/responsive/cat-pages-responsive.css";
