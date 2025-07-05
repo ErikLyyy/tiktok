@@ -4,7 +4,9 @@
 @import "import/home.css";
 @import "import/cat-pages.css";
 @import "import/swiper.css";
+@import "import/contact.css";
 
 /* Responsive */
 @import "import/responsive/home-responsive.css";
 @import "import/responsive/cat-pages-responsive.css";
+@import "import/responsive/contact-responsive.css";

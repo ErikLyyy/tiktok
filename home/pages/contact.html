@@ -11,16 +11,12 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_down"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
   </head>
   <body>
     <!-- HEADER  -->
     <div id="header">
       <div id="nav-wp">
-        <a href="/" id="logo"
+        <a href="../" id="logo"
           ><img
             src="../public/images/logo.png"
             alt="Crystal Audio Visual Services, Inc."
@@ -93,42 +89,46 @@
     </div>
     <div id="head-blank"></div>
     <!-- CONTENT  -->
+
     <div id="content">
       <div class="container">
-        <h1 class="main-title">FULL EVENT TECHNICAL SUPPORT SERVICES</h1>
-        <div id="full-technical-support">
-          <div id="full-event-technical-thumb">
-            <img
-              src="../public/images/full-event-technical.webp"
-              alt=""
-              style="width: 100%; height: auto; max-height: 100%"
-            />
+        <h1 class="main-title">CONTACT US</h1>
+
+        <div id="contact-wp">
+          <div id="contact-form">
+            <form action="">
+              <h2>Drop us a line!</h2>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="form-input-contact"
+                placeholder="Name*"
+              />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="form-input-contact"
+                placeholder="Email*"
+              />
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Message*"
+                rows="8"
+              ></textarea>
+              <button type="submit" id="button-submit">SEND</button>
+              <span
+                >This site is protected by reCAPTCHA and the Google Privacy
+                Policy and Terms of Service apply.</span
+              >
+            </form>
           </div>
-          <div id="full-event-technical-content">
-            <a class="sub-cat-title">Audio Technicians</a>
-            <span
-              >Our Audio Technicians are masters in their craft and work
-              diligently to deliver clear and crisp audio to your event</span
-            >
-            <a class="sub-cat-title">Lighting Technicians</a>
-            <span
-              >When it comes to lighting we demonstrate the importance of laying
-              a foundational platform to accommodate any event. Events ranging
-              from meetings with public speaker to concerts with different
-              bands</span
-            >
-            <a class="sub-cat-title">Video Technicians</a>
-            <span
-              >Skilled Video Technicians will ensure that you create a lasting
-              impression, share your brand message and share your story with
-              your audience</span
-            >
-            <a class="sub-cat-title">Utility Technicians</a>
-            <span
-              >Our skilled Utility Technicians are available to help with any
-              event setup or any other incidental event support we can help
-              with</span
-            >
+          <div id="contact-info">
+            <h2>Crystal Audio Visual Services, Inc.</h2>
+            <span>(866) 441-6468</span>
+            <span>Please contact us for any request at info@crystalav.com</span>
           </div>
         </div>
       </div>
@@ -142,7 +142,6 @@
         </h1>
       </div>
     </div>
-
     <script src="../public/js/jquery.js"></script>
     <script src="../public/js/main.js"></script>
   </body>
