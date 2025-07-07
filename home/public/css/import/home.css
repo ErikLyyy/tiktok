@@ -58,7 +58,8 @@ ul#main-menu {
 }
 
 ul#main-menu li {
-  position: relative; /* relative for dropdown menu */
+  position: relative;
+  /* relative for dropdown menu */
 }
 
 ul#main-menu li a {
@@ -68,27 +69,28 @@ ul#main-menu li a {
   font-weight: 450;
 }
 
-ul#main-menu li:hover > a {
+ul#main-menu li:hover>a {
   color: #000;
   text-decoration: none;
   transition: all 0.3s;
 }
 
 ul#main-menu li a.dropdown-toggle {
-  position: relative; /* relative for the icon dropdown */
+  position: relative;
+  /* relative for the icon dropdown */
 }
 
-ul#main-menu li > a.dropdown-toggle::after {
+ul#main-menu li>a.dropdown-toggle::after {
   content: url("../../images/arrow_down.png");
   position: absolute;
   top: 14px;
 }
 
-ul#main-menu li:hover > a.dropdown-toggle::after {
+ul#main-menu li:hover>a.dropdown-toggle::after {
   content: url("../../images/arrow_down_after.png");
 }
 
-#sub-menu {
+.sub-menu {
   display: none;
   position: absolute;
   top: 100%;
@@ -100,12 +102,12 @@ ul#main-menu li:hover > a.dropdown-toggle::after {
   background-color: #fff;
 }
 
-#sub-menu li:hover {
+.sub-menu li:hover {
   background-color: #e9ecef;
   transition: all 0.3s;
 }
 
-#sub-menu li a {
+.sub-menu li a {
   font-size: 1rem;
 }
 
@@ -155,6 +157,7 @@ ul#main-menu li:hover > a.dropdown-toggle::after {
   padding: 200px 50px;
   color: rgb(255, 255, 255);
   background-size: cover;
+  background-repeat: no-repeat;
   text-shadow: 2px 2px #000;
   text-align: center;
   line-height: 1.2;
@@ -195,7 +198,7 @@ h1.main-title {
   justify-content: space-between;
 }
 
-#content-card-wp > div {
+#content-card-wp>div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -276,6 +279,7 @@ h1.main-title {
   justify-content: center;
   padding: 0;
 }
+
 #reseller-wp ul li {
   width: 16%;
   margin-bottom: 10px;

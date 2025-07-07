@@ -1,9 +1,10 @@
 @media only screen and (max-width: 1440px) {
   /* about-us */
 
-  #content-card-wp > div {
+  #content-card-wp>div {
     padding: 5px;
   }
+
   .content-cart-text h2 {
     font-size: 27px;
   }
@@ -38,6 +39,11 @@
     display: none;
   }
 
+  ul#main-menu {
+    overflow-y: scroll;
+    max-height: 80vh;
+  }
+
   #toggle-menu-wp {
     justify-content: end;
   }
@@ -51,7 +57,7 @@
     margin-left: 10px;
   }
 
-  #menu-btn > span {
+  #menu-btn>span {
     display: block;
     width: 23px;
     height: 2px;
@@ -59,20 +65,20 @@
     background-color: #6f6f6f;
   }
 
-  #menu-btn:hover > span {
+  #menu-btn:hover>span {
     background-color: #000;
     transition: all 0.3s;
   }
 
-  #menu-btn.opened > span:first-child {
+  #menu-btn.opened>span:first-child {
     transform: translate(0, 4px) rotate(-45deg);
   }
 
-  #menu-btn.opened > span:nth-child(2) {
+  #menu-btn.opened>span:nth-child(2) {
     display: none;
   }
 
-  #menu-btn.opened > span:last-child {
+  #menu-btn.opened>span:last-child {
     transform: translate(0, -4px) rotate(45deg);
   }
 
@@ -81,7 +87,7 @@
     flex-direction: column-reverse;
   }
 
-  ul#main-menu.show-menu {
+  ul#main-menu.showed-menu {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -92,19 +98,19 @@
     background-color: #fff;
   }
 
-  ul#main-menu.show-menu > li > a {
+  ul#main-menu.showed-menu>li>a {
     font-size: 16px;
   }
 
-  ul#main-menu.show-menu li:hover > a {
+  ul#main-menu.showed-menu li:hover>a {
     background-color: #e9ecef;
   }
 
-  ul#main-menu.show-menu li:focus > a {
+  ul#main-menu.showed-menu li:focus>a {
     background-color: #e9ecef;
   }
 
-  ul#main-menu.show-menu ul#sub-menu {
+  ul#main-menu.showed-menu ul.sub-menu {
     position: static;
     width: 100%;
     padding-left: 20px;
@@ -112,10 +118,11 @@
     border-radius: 5px;
   }
 
-  ul#sub-menu > li > a {
+  ul.sub-menu>li>a {
     font-size: 14px;
   }
 }
+
 @media only screen and (max-width: 1024px) {
   /* =============CONTENT=================== */
 
@@ -137,7 +144,7 @@
     font-size: 14px;
   }
 
-  #content-card-wp > div {
+  #content-card-wp>div {
     width: 50%;
   }
 
@@ -181,6 +188,7 @@
     max-height: 50px;
   }
 }
+
 @media only screen and (max-width: 768px) {
   /* head-title */
 
@@ -199,7 +207,7 @@
 
   /* about-us */
 
-  #content-card-wp > div {
+  #content-card-wp>div {
     width: 100%;
   }
 
@@ -239,6 +247,7 @@
     max-height: 40px;
   }
 }
+
 @media only screen and (max-width: 576px) {
   /* head-title */
 
@@ -267,5 +276,5 @@
     font-size: 22px;
   }
 }
-@media only screen and (max-width: 320px) {
-}
+
+@media only screen and (max-width: 320px) {}
