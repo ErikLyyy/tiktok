@@ -4,6 +4,48 @@ $(document).ready(function () {
         windowWidth = $(this).width();
     })
 
+    function preventScrollOutside($element) {
+        $element.each(function () {
+            const $el = $(this);
+            let startY = 0;
+
+            // Block scrolling outside html on desktop devices
+            $el.on('wheel', function (e) {
+                const scrollTop = $el.scrollTop();
+                const scrollHeight = $el[0].scrollHeight;
+                const clientHeight = $el.outerHeight();
+                const deltaY = e.originalEvent.deltaY;
+
+                const atTop = scrollTop <= 0;
+                const atBottom = scrollTop + clientHeight >= scrollHeight - 1;
+
+                if ((deltaY < 0 && atTop) || (deltaY > 0 && atBottom)) {
+                    e.preventDefault();
+                }
+            });
+
+            // Block scrolling outside html on mobile devices (touch screen)
+            $el.on('touchstart', function (e) {
+                startY = e.originalEvent.touches[0].clientY;
+            });
+
+            $el.on('touchmove', function (e) {
+                const scrollTop = $el.scrollTop();
+                const scrollHeight = $el[0].scrollHeight;
+                const clientHeight = $el.outerHeight();
+                const currentY = e.originalEvent.touches[0].clientY;
+                const diffY = startY - currentY;
+
+                const atTop = scrollTop <= 0;
+                const atBottom = scrollTop + clientHeight >= scrollHeight - 1;
+
+                if ((diffY < 0 && atTop) || (diffY > 0 && atBottom)) {
+                    e.preventDefault();
+                }
+            });
+        });
+    }
+
     // scroll to hide/showed navbar 
     var headerHeight = $('#header').outerHeight();
     var lastScrollTop = 0;
@@ -77,6 +119,12 @@ $(document).ready(function () {
         $('ul.sub-menu').fadeOut(0);
         e.stopPropagation();
     })
+    $("ul.sub-menu").click(function (e) {
+        e.stopPropagation();
+    })
+
+    // Block scrolling outside html
+    preventScrollOutside($('#main-menu'))
 
     // select form (list-product) event
     $('.select-form').click(function (e) {
@@ -167,6 +215,39 @@ $(document).ready(function () {
     $('.current-page').click(function (e) {
         e.preventDefault
     })
+
+    // relative carousel btn event
+    var carouselTranslateX = 0;
+    var liWidth = $('.list-products li:first').width() + 7 // 5px (margin-left) + 2px (border)
+    var ulWidth = $('ul.list-products').width()
+    var countLi = $('.list-products li').length
+    var maxTranslateX = liWidth * countLi - 5 - ulWidth;  // -5px margin-left of last li 
+    $('.relative-carousel-btn-next').click(function () {
+        $('.relative-carousel-btn-back').css('display', 'flex')
+        carouselTranslateX += liWidth * 4;
+        if (carouselTranslateX >= maxTranslateX) {
+            carouselTranslateX = maxTranslateX
+            $('.relative-carousel-btn-next').css('display', 'none')
+        }
+        $('.detail-product-pg ul.list-products').css({ transform: 'translateX(-' + carouselTranslateX + 'px) translateZ(0px)', transition: 'all 0.5s' });
+    })
+    $('.relative-carousel-btn-back').click(function () {
+        $('.relative-carousel-btn-next').css('display', 'flex')
+        carouselTranslateX -= liWidth * 4;
+        if (carouselTranslateX <= 0) {
+            carouselTranslateX = 0
+            $('.relative-carousel-btn-back').css('display', 'none')
+
+        }
+        $('.detail-product-pg ul.list-products').css({ transform: 'translateX(-' + carouselTranslateX + 'px) translateZ(0px)', transition: 'all 0.5s' });
+    })
+
+    // $('.relative-carousel-wp').scroll(function () {
+    //     var scrollVal = $('.relative-carousel-wp li:first').position().left
+    //     // console.log($('.relative-carousel-wp li:first').position().left)
+    //     $(this).children('.relative-carousel-btn-back').css('left', -scrollVal)
+    //     console.log(scrollVal);
+    // })
 
 
     // code to handle when clicking on document

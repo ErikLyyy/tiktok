@@ -1,5 +1,5 @@
-@media only screen and (max-width: 1440px) {
-}
+@media only screen and (max-width: 1440px) {}
+
 @media only screen and (max-width: 1024px) {
   ul.list-sub-cat li {
     margin-bottom: 40px;
@@ -29,8 +29,12 @@
   /* swiper  */
 
   #layout4 .swiper-button-next,
-  .swiper-button-prev {
+  #layout4 .swiper-button-prev {
     top: 40% !important;
+  }
+
+  .carousel-wp {
+    width: 100%;
   }
 
   /* Full technical support  */
@@ -43,6 +47,7 @@
     margin-top: 20px;
   }
 }
+
 @media only screen and (max-width: 768px) {
   ul.list-sub-cat li {
     width: 100%;
@@ -81,15 +86,17 @@
   }
 
   ul#layout2.list-sub-cat li a,
-  ul#layout2.list-sub-cat li > div {
+  ul#layout2.list-sub-cat li>div {
     padding: 0 15px;
   }
 }
+
 /* Layout 4 */
 
 #layout4 p {
   font-size: 16px;
 }
+
 @media only screen and (max-width: 576px) {
   /* Layout 3 */
 
@@ -107,9 +114,9 @@
   /* swiper  */
 
   #layout4 .swiper-button-next,
-  .swiper-button-prev {
+  #layout4 .swiper-button-prev {
     top: 30% !important;
   }
 }
-@media only screen and (max-width: 320px) {
-}
+
+@media only screen and (max-width: 320px) {}
